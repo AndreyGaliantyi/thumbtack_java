@@ -207,7 +207,6 @@ public class FileService {
 
     public static void writeTraineeToTextFileOneLine(File file, Trainee trainee) throws IOException {
         try (DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file))) {
-            StringBuilder sb = new StringBuilder(trainee.getFirstName());
             dataOutputStream.writeUTF(trainee.getFirstName());
             dataOutputStream.writeByte(' ');
             dataOutputStream.writeUTF(trainee.getLastName());
